@@ -58,7 +58,7 @@ function asyncPromiseFunc() {
                 resolve("Successfully resolved promise") 
                 : 
                 reject({error:"The thing I promised you ran into an error!"});
-        }, generateRandomNumber(1000, 5000));
+        }, generateRandomNumber(1000, 1500));
     });
 }
 
@@ -90,12 +90,12 @@ function getLightSalmonPlayer(playerName) {
         setTimeout(() => {
             const foundPlayer = detailedPlayerInfo.find(player => player.name === playerName );
             (foundPlayer) ? resolve(foundPlayer) : reject({ error: "Unable to find player with that name"});
-        }, generateRandomNumber(1000, 5000));
+        }, generateRandomNumber(1000, 1500));
     });
 }
 
 /**
- * Returns sportsTeam object randomly between 100 - 5000 seconds
+ * Returns sportsTeam object randomly between 100 - 1500 seconds
  * 
  * @returns Promise contains sportsTeamObject
  */
@@ -103,7 +103,7 @@ function getLightSalmonsResolved() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(sportsTeam);
-        }, generateRandomNumber(1000, 5000));
+        }, generateRandomNumber(1000, 1500));
     });
 }
 
@@ -116,7 +116,7 @@ function getLightSalmonsRejected() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             reject({ error: "Unable to process request" });
-        }, generateRandomNumber(1000, 5000));
+        }, generateRandomNumber(1000, 1500));
     });
 }
 
